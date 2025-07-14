@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pet Nina - Produtos para seu Pet</title>
+  </head>
+
+  <body>
+    <header>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="link-header">Início</a>
+        <a href="#sobre" class="link-header">Sobre</a>
+        <a href="#produtos" class="link-header">Produtos</a>
+        <a href="#servicos" class="link-header">Serviços</a>
+        <a href="#contato" class="link-header">Contato</a>
+        <button class="button-header">Login</button>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>PET NINA</h1>
+        <h2>Produtos para seu Pet</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          architecto facilis magni eligendi minima velit sunt ducimus eum saepe
+          odio quidem mollitia impedit, maiores, earum et beatae commodi, soluta
+          perferendis? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ratione, sequi nobis pariatur neque quos ad voluptates voluptatibus
+          quidem ipsam veniam alias voluptatum
+        </p>
+        <button class="button-main">Explore</button>
+      </section>
+
+      <img
+        src="./img/Pet.png"
+        alt="Imagem de um cachorro fofo"
+        class="logo-image"
+      />
+    </main>
+
+    <script>
+      // Menu mobile toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Fechar menu ao clicar em um link
+      document.querySelectorAll(".link-header").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
